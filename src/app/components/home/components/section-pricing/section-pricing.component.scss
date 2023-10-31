@@ -1,0 +1,57 @@
+.bg-white{
+    background-color: #fff;
+}
+
+.bg-dark{
+    color: #fff;
+    background-color: #000;
+}
+
+.bg-yellow{
+    color: #000;
+    background-color: #ffd200;
+}
+
+.card-prices{
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.08), 0px 3px 4px rgba(0, 0, 0, 0.1), 0px 1px 4px -1px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+
+    &:hover{
+        box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.06), 0px 7px 9px rgba(0, 0, 0, 0.12), 0px 20px 25px -8px rgba(0, 0, 0, 0.18);
+    }
+
+    .card-prices-header{
+        padding: 15px;
+    }
+
+    .card-prices-body{
+        padding: 15px 32px;
+    }
+}
+
+
+.one-location{
+    .card-prices{
+        width: 20%;
+    }
+}
+
+// .aditional-location{
+//     .card-prices{
+//         width: 26%;
+//     }
+// }
+
+.packing-service{
+    .card-prices{
+        width: 25%;
+    }
+}
+
+
+.fa-circle-check{
+    color: #ffd200;
+}

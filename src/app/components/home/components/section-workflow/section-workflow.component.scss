@@ -1,0 +1,59 @@
+
+.custom-marker{
+    border-radius: 50%;
+    padding: 8px;
+
+    color: #fff;
+    text-align: center;
+}
+
+.card-step{
+    // margin: 0 5px;
+    padding: 10px;
+}
+
+.step {
+    white-space: nowrap;
+    width: 50px;
+  }
+
+.circle{
+    padding: 8px;
+    border-radius: 50%;
+    border: 2px solid;
+}
+
+.circle-yellow{
+    background-color: #ffd200;
+    border-color: #ffd200;
+    color: #fff;
+}
+
+.circle-pink{
+    background-color: #ffd200;
+    border-color: #ffd200;
+    color: #fff;
+}
+
+.circle-blue{
+    background-color: #ffd200;
+    border-color: #ffd200;
+    color: #fff;
+}
+
+.circle-orange{
+    background-color: #ffd200;
+    border-color: #ffd200;
+    color: #fff;
+}
+
+.line{
+    padding: 0;
+    height: 160px;
+    // width: 1px;
+    border: 1px solid #a1a1a1;
+}
+
+.img-agent{
+    transform: translateY(7px);
+}

@@ -1,0 +1,179 @@
+<header class="header">
+    <div class="infobar" *ngIf="scrollPosition === 0">
+        <div class="container flex justify-content-between align-items-center">
+            <div class="address flex gap-2 align-items-center">
+                <i class="pi pi-map-marker" style="font-size: 1rem"></i>
+                <span>Ave. Independecia No.1245, Mexico</span>
+            </div>
+            <div class="sheduler flex gap-2 align-items-center">
+                <i class="pi pi-clock" style="font-size: 1rem"></i>
+                <span>Mon - Fri: 8am - 3pm</span>
+            </div>
+            <div class="social-media flex gap-3">
+                <i class="pi pi-twitter" style="font-size: 1rem"></i>
+                <i class="pi pi-linkedin" style="font-size: 1rem"></i>
+                <i class="pi pi-facebook" style="font-size: 1rem"></i>
+                <i class="pi pi-instagram" style="font-size: 1rem"></i>
+            </div>
+        </div>
+    </div>
+    <div class="nav-menu" [ngClass]="{'bg-dark': scrollPosition !== 0}">
+        <div class="container flex justify-content-between align-items-center" style="background-size: cover;">
+            <!-- logo begin -->
+            <div id="logo" style="background-size: cover;">
+                <a href="index.html">
+                    <img id="ctl03_ctl13_imgLogoLnk" class="site-logo" src="assets/image/tshirtguys_logo_white.png"
+                        alt="tShirtGuys's Logo" style="border-width: 0px; height: 60px;">
+                </a>
+            </div>
+            <!-- logo close -->
+
+            <!-- small button begin -->
+            <span id="menu-btn"></span>
+            <!-- small button close -->
+
+            <!-- mainmenu begin -->
+            <nav class="flex">
+                <ul id="mainmenu" class="menu" [ngClass]="{'menu-show': showMenu}">
+                    <li><a routerLink="/home" class="active">Home</a></li>
+                    <li class="menu-aboutus"><a class="flex gap-2 align-items-center"
+                            [ngClass]="{'text-light': scrollPosition !== 0}" (click)="navigateTo('section-about')"
+                            (mouseover)="showDropdown('aboutUsDropdown')">
+                            About Us
+                            <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                        <ul [ngClass]="scrollPosition !== 0 ? 'dropdown-menu-dark' : 'dropdown-menu-light'"
+                            *ngIf="showAboutUsDropdown">
+                            <li><a (click)="navigateTo('section-ourservices')">Our Services</a></li>
+                            <li><a (click)="navigateTo('section-ourworkflow')">Our Work Process</a></li>
+                            <li><a (click)="navigateTo('section-happyclients')">Our Happy Customers</a></li>
+                        </ul>
+                    </li>
+                    <li><a [ngClass]="{'text-light': scrollPosition !== 0}" href="https://tshirtguys.espwebsite.com/"
+                            target="_blank">Promotional Products</a></li>
+                    <li><a routerLink="/contact" [ngClass]="{'text-light': scrollPosition !== 0}">Contact</a></li>
+                    <li><a class="btn btn-free-quote" [ngClass]="{'text-light': scrollPosition !== 0}"
+                            (click)="toggleModel()">Request your Free Quote</a></li>
+                    
+                </ul>
+                <i [ngClass]="{'text-light': scrollPosition !== 0}" class="fa-solid fa-bars" (click)="toggleMenu()"></i>
+            </nav>
+
+        </div>
+        <!-- mainmenu close -->
+    </div>
+</header>
+<div class="bg-opacity flex align-items-center justify-content-center" *ngIf="closeModel">
+    <div class="model-quotes mt-3">
+        <i class="fa-solid fa-xmark" (click)="toggleModel()"></i>
+        <div>
+            <div class="formgrid grid">
+                <div class="col-5 px-6 py-0 bg-dark flex flex-column justify-content-center gap-5">
+                    <h2 class="text-center text-light">Quotation Request</h2>
+                    <p class="text-center text-light">
+                        The information you provide us, as well as your personal data, are safe
+                        with us and we only use your data to process quotes.
+                    </p>
+                </div>
+                <div class="col-7 form">
+                    <h2 class="text-center">Get a Quote</h2>
+                    <form action="">
+                        <div class="formgrid grid">
+                            <div class="field col-12">
+                                <label for="firstname6">Full Name</label>
+                                <input id="firstname6" type="text"
+                                    class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+                            </div>
+                            <div class="field col-12 md:col-6">
+                                <label for="firstname6">Email</label>
+                                <input id="firstname6" type="text"
+                                    class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+                            </div>
+                            <div class="field col-12 md:col-6">
+                                <label for="lastname6">Phone</label>
+                                <input id="lastname6" type="text"
+                                    class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+                            </div>
+                            <div class="field col-12 md:col-6">
+                                <label for="state">Select garment</label>
+                                <select id="state"
+                                    class="w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round outline-none focus:border-primary"
+                                    style="appearance: auto">
+                                    <option>Crew neck t-shirt</option>
+                                    <option>v-neck t-shirt</option>
+                                    <option>Hoodie</option>
+                                    <option>Long sleeve</option>
+                                    <option>Face Mask</option>
+                                    <option>Tote Bag</option>
+                                </select>
+                            </div>
+                            <div class="field col-12 md:col-6">
+                                <label for="state">By</label>
+                                <select id="state"
+                                    class="w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round outline-none focus:border-primary"
+                                    style="appearance: auto">
+                                    <option>Man</option>
+                                    <option>Woman</option>
+                                    <option>Youth</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="field col-12 flex flex-column justify-content-around">
+                                <label for="state">Select color</label>
+                                <div class="flex justify-content-between flex-wrap">
+                                    <div class="flex align-items-center gap-1">
+                                        <p-checkbox class="p-2" name="groupname" value="val1"></p-checkbox>
+                                        <label for="la">Black</label>
+                                    </div>
+                                    <div class="flex align-items-center gap-1">
+                                        <p-checkbox class="p-2" name="groupname" value="val1"></p-checkbox>
+                                        <label for="la">White</label>
+                                    </div>
+                                    <div class="flex align-items-center gap-1">
+                                        <p-checkbox class="p-2" name="groupname" value="val1"></p-checkbox>
+                                        <label for="la">Gray</label>
+                                    </div>
+                                    <div class="flex align-items-center gap-1">
+                                        <p-checkbox class="p-2" name="groupname" value="val1"></p-checkbox>
+                                        <label for="la">Other</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field col-12">
+                                <label for="firstname6">Quantity <small>(1200 is the minimum order
+                                        quantity)</small></label>
+                                <input id="firstname6" type="number"
+                                    class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+                            </div>
+                            <div class="field col-12">
+                                <label for="address">More details</label>
+                                <textarea id="address" type="text" rows="4"
+                                    class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"></textarea>
+                            </div>
+                            <div class="field col-12 flex flex-column justify-content-around">
+                                <label for="state">Extras:</label>
+                                <div class="flex justify-content-between flex-wrap">
+                                    <div class="flex align-items-center gap-1">
+                                        <p-checkbox class="p-2" name="groupname" value="val1"></p-checkbox>
+                                        <label for="la">Folding</label>
+                                    </div>
+                                    <div class="flex align-items-center gap-1">
+                                        <p-checkbox class="p-2" name="groupname" value="val1"></p-checkbox>
+                                        <label for="la">Polybag</label>
+                                    </div>
+                                    <div class="flex align-items-center gap-1">
+                                        <p-checkbox class="p-2" name="groupname" value="val1"></p-checkbox>
+                                        <label for="la">Necklabel</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 flex justify-content-end">
+                                <span pRipple class="btn btn-quote">Request a quote</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

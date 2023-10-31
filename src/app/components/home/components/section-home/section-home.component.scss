@@ -1,0 +1,96 @@
+
+.btn {
+    padding: 15px 25px;
+}
+
+
+.presentation {
+    // display: absolute;
+    // z-index: 99;
+
+    .hero {
+        position: relative;
+        height: calc(100vh - 100px);
+        background-image: url('https://media.istockphoto.com/id/1401343943/es/foto/operadora-de-impresi%C3%B3n-femenina.jpg?s=2048x2048&w=is&k=20&c=2HXoWPFdej5fbJBlckcW_Djw-yvIMaLoLJlAsqRD_5U=');
+        background-position: center;
+        background-size: cover;
+        padding-top: 125px;
+        overflow: hidden;
+
+        .content-middle {
+            margin-top: 20px;
+
+            @media (min-width: 860px) {
+                margin-top: 95px;
+            }
+
+            .title {
+                font-size: 40px;
+                color: #fff;
+
+                @media (min-width: 860px) {
+                    font-size: 70px;
+                }
+
+                .tiny-border {
+                    height: 2px;
+                    background: #333;
+                    width: 100px;
+                    margin-top: 20px;
+                    display: block;
+                    background-color: #ffd200;
+                }
+            }
+
+            .bottons{
+                margin-top: 20px;
+                padding: 10px 0 0 0 ;
+
+                .btn-start{
+                    text-decoration: none;
+                    font-weight: 600;
+                    font-size: 1rem;
+                    color: #333;
+                    background-color: #ffd200;
+                }
+
+                .btn-contact{
+                    text-decoration: none;
+                    font-weight: 600;
+                    font-size: 1rem;
+                    color: #fff;
+                    border: 2px solid #fff;
+                }
+            }
+        }
+
+
+    }
+    .wave {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        height: 100px;
+        background-image: url("../../../../../assets/image/wave-hero.png");
+        background-size: 1000px 100px;
+        animation: wave 10s linear infinite;
+    }
+
+    @keyframes wave {
+        0%{
+            background-position-x: 0;
+        }
+
+        100%{
+            background-position-x: 1000px;
+        }
+    }
+
+    // .wave {
+    //     position: absolute;
+    //     width: 100%;
+    //     bottom: 99px;
+    // }
+
+}

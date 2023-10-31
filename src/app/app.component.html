@@ -1,0 +1,11 @@
+<app-top-bars></app-top-bars>
+
+<router-outlet>  
+</router-outlet>
+
+
+<app-footer></app-footer>
+
+<div class="" [ngClass]="scrollPosition > 100 ? 'scrollActivated' : 'up'" (click)="scrollToTop()">
+    <i class="fa-solid fa-circle-up floating"></i>
+</div>

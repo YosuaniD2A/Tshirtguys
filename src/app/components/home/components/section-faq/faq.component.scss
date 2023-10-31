@@ -1,0 +1,105 @@
+.bg-image {
+    background-image: url('https://img.freepik.com/vector-gratis/fondo-blanco-interrogacion-estilo-minimalista_1017-25235.jpg?w=826&t=st=1698371209~exp=1698371809~hmac=145a2abc7d57a556ad05aa5391be226f9268231a014f938439162444a1d2faa0');
+}
+
+.capa {
+    background-image: linear-gradient(to top, rgba(104, 224, 207, 0.66) 0%, rgba(32, 156, 255, 0.66) 100%);
+}
+
+.text-light {
+    color: #fff;
+}
+
+.accordion-header{
+    cursor: pointer;
+    // width: 70%;
+    font-weight: 700;
+    // color: #13c3c9;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e4e4e4;
+    //border: 1px solid #dedede;
+    //border-radius: 5px;
+    //background-color: rgba(79, 170, 245, 0.799);
+    //background-image: linear-gradient(60deg, rgba(32, 156, 255) 0%, rgba(104, 224, 207) 100%);
+    padding: 20px;
+
+    &:hover{
+        //outline: 2px solid rgba(69, 166, 246, 0.805);
+        //font-size: 17px;
+    }
+}
+
+.accordion-content {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.0s ease;
+    transform-origin: top;
+    padding: 0 20px;
+
+    @media (min-width: 700px) {
+        width: 700px;
+    }
+
+    @media (min-width: 1100px) {
+        width: 1000px;
+    }
+
+    p{
+        border: 1px solid #e4e4e4;
+        border-top: 0px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        padding: 15px;
+        color: #000;
+        background-color: rgba(246, 246, 247, 0.332);
+    }
+}
+
+// .accordion-header{
+//     font-weight: 700;
+//     // color: #13c3c9;
+//     color: #fcffff;
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     //border: 1px solid #dedede;
+//     border-radius: 5px;
+//     background-color: rgba(79, 170, 245, 0.799);
+//     //background-image: linear-gradient(60deg, rgba(32, 156, 255) 0%, rgba(104, 224, 207) 100%);
+//     padding: 10px;
+
+//     &:hover{
+//         outline: 2px solid rgba(69, 166, 246, 0.805); 
+//     }
+// }
+
+// .accordion-content {
+//     width: 1000px;
+//     max-height: 0;
+//     overflow: hidden;
+//     transition: max-height 1.0s ease;
+//     transform-origin: top;
+//     padding: 0 20px;
+
+//     p{
+//         border: 1px solid #23a3f8;
+//         border-top: 0px;
+//         border-bottom-left-radius: 5px;
+//         border-bottom-right-radius: 5px;
+//         padding: 15px;
+//         color: #464646;
+//         background-color: rgba(145, 201, 247, 0.332);
+//     }
+// }
+
+.accordion-content.open {
+     max-height: 1000px ;
+    /* Establece la altura máxima que quieras que tenga al abrirse */
+    transition: max-height 4.5s ease;
+    /* Puedes ajustar la duración de la animación aquí */
+}
+

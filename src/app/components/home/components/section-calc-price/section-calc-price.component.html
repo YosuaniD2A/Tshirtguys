@@ -1,0 +1,123 @@
+<section id="section-pricing" class=" py-8">
+    <div class="flex flex-column justify-content-center gap-6">
+        <div class="container text-header">
+            <h2 class="text-header-section" data-animation="show">Pricing</h2>
+        </div>
+        <div class="grid">
+            <div class="col-12 lg:col-5 bg-blue-deep">
+                <div class="flex flex-column gap-4 p-8 text-white">
+                    <h2 class="text-center">Custom Price Calculator</h2>
+                    <div class="flex flex-column gap-2">
+                        <p>Welcome to our Price Calculator! Here you can get a quick estimate for your custom apparel
+                            printing order. Follow these simple steps:</p>
+
+                        <p><strong>Quantity of Pieces:</strong> Select how many garments you want to print. From a small
+                            quantity for special events to larger-scale productions, we cover all your needs.</p>
+
+                        <p><strong>Inks:</strong> Specify how many colors you want to use in your design. This will
+                            affect the complexity of the printing and, therefore, the cost.</p>
+
+                        <p><strong>Additional Locations:</strong> If you want to print in more than one location (e.g.,
+                            front and back), specify the quantity here.</p>
+
+                        <p>That's it! You'll get an immediate estimate for your printing project. Remember, we're here
+                            to answer any questions or provide additional assistance. We look forward to working with
+                            you to create standout custom apparel. Get started now!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 lg:col-7 flex ">
+                <div class="p-5 w-8">
+                    <form class="flex flex-column gap-4" action="">
+                        <span class="text-center"><strong>One location print</strong></span>
+                        <div class=" flex gap-5">
+                            <div class="flex flex-column gap-2">
+                                <div class="flex align-items-center gap-2"><label htmlFor="username">Quantity of
+                                        Pieces</label><i class="fa-regular fa-circle-question"></i></div>
+                                <input id="firstname6" type="number" [(ngModel)]="quantityPieces" [ngModelOptions]="{standalone: true}"
+                                    class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+                                <small id="username-help">The minimum quantity is 1200</small>
+                            </div>
+                            <div class="flex flex-column gap-2 flex-grow-1">
+                                <div class="flex align-items-center gap-2"><label htmlFor="username">Inks</label><i
+                                        class="fa-regular fa-circle-question"></i></div>
+                                <select id="state"
+                                    class="w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round outline-none focus:border-primary"
+                                    style="appearance: auto" [(ngModel)]="selectedQuantityInks" (change)="onChangeInk()" [ngModelOptions]="{standalone: true}">
+                                    <option value="opcion0">Select quantity</option>
+                                    <option value="opcion1">1 - 2</option>
+                                    <option value="opcion2">3 - 4</option>
+                                    <option value="opcion3">5 - 6</option>
+                                    <option value="opcion4">7 - 8</option>
+                                    <option value="opcion5">9 - 10</option>
+                                </select>
+                            </div>
+                        </div>
+                        <span class="text-center mt-3"><strong>Aditional print location (1 - 5 inks)</strong></span>
+                        <div class="flex fle-wrap gap-5">
+                            <div class="flex flex-column gap-2">
+                                <div class="flex align-items-center gap-1">
+                                    <p-checkbox name="group1" value="New York" inputId="ny"></p-checkbox>
+                                    <label for="ny">OTHER (3"x3")</label>
+                                </div>
+                                <div class="flex align-items-center gap-1">
+                                    <p-checkbox name="group1" value="New York" inputId="ny"></p-checkbox>
+                                    <label for="ny">NECK LABEL ONE COLOR PRINT</label>
+                                </div>
+                            </div>
+                            <div class="flex flex-column gap-2">
+                                <div class="flex align-items-center gap-1">
+                                    <p-checkbox name="group1" value="New York" inputId="ny"></p-checkbox>
+                                    <label for="ny">SLEEVE PRINT</label>
+                                </div>
+                                <div class="flex align-items-center gap-1">
+                                    <p-checkbox name="group1" value="New York" inputId="ny"></p-checkbox>
+                                    <label for="ny">BACK PRINT</label>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="text-center mt-3"><strong>Finishing/Packaging services</strong></span>
+                        <div>
+                            <select id="state"
+                            class="w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round outline-none focus:border-primary"
+                            style="appearance: auto"
+                            [(ngModel)]="selectedOptionServices" (change)="onChangeService()" [ngModelOptions]="{standalone: true}">
+                            <option value="opcion0">Select type of service</option>
+                            <option value="opcion1">Apply sticker to Polybag - Per garment</option>
+                            <option value="opcion2">Ticketing / Hang Tag - Per garment</option>
+                            <option value="opcion3">Individually Fold - Per garment</option>
+                            <option value="opcion4">Poly bagged - Per garment</option>
+                            <option value="opcion5">Poly bagged - Per prepack</option>
+                        </select>
+                        </div>
+                        <div class="flex justify-content-end">
+                            <span class="btn-calc" (click)="calculate()">CALCULATE</span>
+                        </div>
+                    </form>
+                    <div class="total-card mt-5">
+                        <div class="flex justify-content-between">
+                            <span class="text-lg text-white">Purchase price:</span>
+                            <span class="text-lg text-white">$ {{purchasePrice}}</span>
+                        </div>
+                        <div class="flex justify-content-between">
+                            <span class="text-base text-white">Aditional values:</span>
+                            <span class="text-base text-green-500">$ 0.00</span>
+                        </div>
+                        <div class="flex justify-content-between">
+                            <span class="text-base text-white">Services:</span>
+                            <span class="text-base text-green-500">$ 0.00</span>
+                        </div>
+                        <p-divider styleClass="my-2" type="solid"></p-divider>
+                        <div class="flex justify-content-between">
+                            <span class="text-xl text-white">Total:</span>
+                            <span class="text-xl text-white">$ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-content-center align-items-center mockup">
+                    <img src="https://static.wixstatic.com/media/48486d_92fc30ae0fd94dd3b80e391e0e360b07~mv2.png/v1/fill/w_944,h_679,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/48486d_92fc30ae0fd94dd3b80e391e0e360b07~mv2.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

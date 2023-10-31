@@ -1,0 +1,64 @@
+.bg-image{
+    background-image: url('https://img.freepik.com/foto-gratis/hombre-que-trabajaba-imprenta-papel-pinturas_1303-26597.jpg?w=1380&t=st=1697823771~exp=1697824371~hmac=14f710e46b97d37ab31267b5b4e330ec0a5dc60902a4eb783526dd0e5003a4b8');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.bg-color{
+    background-color: #fcfcfd;
+}
+
+.texto-sobre-fondo {
+    backdrop-filter: blur(10px); /* Ajusta el valor de desenfoque según tus preferencias */
+    background-color: rgba(255, 255, 255, 0.5); /* Ajusta el color de fondo y la opacidad según tus preferencias */
+    padding: 20px;
+}
+
+.relative {
+    width: 300px; /* Establece el ancho deseado */
+    // height: 300px; /* Establece la altura deseada */
+    text-align: center; /* Centra el texto horizontalmente */
+    position: relative;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+  }
+  
+  .card-process {
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+
+    i{
+        color: #ffd200;
+    }
+  }
+  
+  .card-process h2 {
+    margin: 0; /* Elimina el margen predeterminado del h2 */
+  }
+  
+  .card-process-back {
+    background-color: #ffd200; /* Cambia el color de fondo según tus preferencias */
+    position: absolute;
+    top: 5px; /* Ajusta la distancia que quieres que sobresalga por debajo */
+    left: 1px; /* Ajusta la distancia que quieres que sobresalga por los lados */
+    right: 1px; /* Ajusta la distancia que quieres que sobresalga por los lados */
+    bottom: -5px; /* Ajusta la distancia que quieres que sobresalga por debajo */
+    border-radius: 6px;
+    z-index: 1; /* Asegura que card-process-back esté detrás de card-process */
+    opacity: 0; /* Hace que la capa esté inicialmente invisible */
+    transition: opacity 0.3s ease; /* Añade una transición suave para el efecto */
+  }
+  
+  .relative:hover .card-process-back {
+    opacity: 1;
+  }

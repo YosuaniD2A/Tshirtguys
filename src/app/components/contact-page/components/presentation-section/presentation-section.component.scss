@@ -1,0 +1,39 @@
+.presentation{
+    height: 70vh;
+    background-image: url('https://img.freepik.com/foto-gratis/retrato-mujer-latina-bastante-joven-que-lleva-auricular-sentado-su-escritorio-oficina-companeros-trabajo-segundo-plano_662251-1558.jpg?w=1380&t=st=1698120426~exp=1698121026~hmac=10c17800ed88e64a0396b2343ac87cbbe6d7a6ac30927a81bb3ddd4809e1245b');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.texto-sobre-fondo {
+    backdrop-filter: blur(1px); /* Ajusta el valor de desenfoque según tus preferencias */
+    background-color: rgba(255, 255, 255, 0.5); /* Ajusta el color de fondo y la opacidad según tus preferencias */
+    padding: 40px;
+    width: 100%;
+
+    .text{
+        color: rgb(49, 49, 49);
+        font-size: 10px;
+
+        @media (min-width: 800px) {
+            font-size: 15px;
+        }
+    }
+
+    @media (min-width: 1000px) {
+        width: 70%;
+    }
+
+    @media (min-width: 1400px) {
+        width: 50%;
+    }
+}
+
+.fa-quote-left{
+    color: #ffd200;
+    font-size: 50px;
+    background: none;
+    border: none;
+}
+

@@ -1,0 +1,23 @@
+<section id="faq" class="">
+    <div class=" py-8">
+        <div class="container flex flex-column align-items-center gap-7">
+            <div class="text-header">
+                <h2 class="text-header-section text-dark" data-animation="show">Frequently Asked Questions</h2>
+            </div>
+            <p class="w-6 text-dark text-center">
+                We are here to serve you, any questions you can send us an email to info@tshirtguys.com and do not forget to review the information that we provide below.
+            </p>
+            <div class="flex gap-4 flex-column align-items-start justify-content-center" >
+                <div class="accordion-item flex flex-column gap-0" *ngFor="let item of accordionItems; let i = index">
+                  <div class="accordion-header" (click)="toggleAccordion(i)">
+                    {{ item.title }}
+                    <i class="fa-solid" [class.fa-angle-down]="!item.isOpen" [class.fa-angle-up]="item.isOpen"></i>
+                  </div>
+                  <div class="accordion-content" [ngClass]="{'open': item.isOpen}">
+                    <p>{{ item.content }}</p>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+</section>

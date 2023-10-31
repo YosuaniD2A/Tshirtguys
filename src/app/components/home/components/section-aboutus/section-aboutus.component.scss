@@ -1,0 +1,57 @@
+.aboutus-section {
+    width: 100%;
+
+    p {
+        width: 60%;
+        text-align: center;
+    }
+
+    .tiny-border {
+        height: 2px;
+        background: #333;
+        width: 50px;
+        display: block;
+        background-color: #ffd200;
+    }
+
+    .img-tumbnail {
+        padding: 10px;
+        //background-color: #ffd200;
+        border: 1px solid #cfcfcf;
+        transition: box-shadow 0.3s;
+
+        &:active {
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    .marquee-container {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .marquee-content {
+        white-space: nowrap;
+        display: flex;
+        animation: marquee 50s linear infinite;
+    }
+
+    .marquee-content img {
+        display: inline-block;
+        width: 300px;
+        border-radius: 25px;
+        height: auto;
+        margin: 0 20px;
+    }
+
+    @keyframes marquee {
+        from {
+            transform: translateX(1%);
+        }
+
+        to {
+            transform: translateX(calc(-530px - 100vw));
+        }
+    }
+
+}

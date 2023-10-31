@@ -1,0 +1,26 @@
+<section id="section-happyclients" class="bg-color pt-8 pb-7">
+    <div class="container card flex flex-column justify-content-center gap-7">
+        <div class="text-header">
+            <h1 class="text-header-section" data-animation="show">Our Happy Customers</h1>
+        </div>
+        <p-carousel [value]="clients" [numVisible]="2" [numScroll]="1" [circular]="true" [autoplayInterval]="3000"
+            [showIndicators]="false" [responsiveOptions]="responsiveOptions">
+            <ng-template let-client pTemplate="item">
+                <div class="card-customer bg-light shadow-card border-round m-4 text-center p-2">
+                    <div class="my-3">
+                        <i class="fa-solid fa-quote-left shadow-5"></i>
+                    </div>
+                    <p-rating [(ngModel)]="client.rating" [readonly]="true" [cancel]="false"></p-rating>
+                    <div class="mt-3 px-4 pb-4 flex flex-column gap-3">
+                        <span><strong>{{client.brief}}</strong></span>
+                        <p>{{client.description | splitWords }}</p>
+                        <div>
+                            <span><strong>{{client.name}}</strong></span>
+                            <p><small>{{client.busniess}}</small></p>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </p-carousel>
+    </div>
+</section>

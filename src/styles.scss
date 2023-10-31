@@ -1,0 +1,120 @@
+@import "../node_modules/primeng/resources/themes/md-light-indigo/theme.css";
+@import "../node_modules/primeng/resources/primeng.min.css";
+@import "../node_modules/primeicons/primeicons.css";
+@import "../node_modules/primeflex/primeflex.scss";
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Poppins, sans-serif;
+    background-color: #fcfcfd;
+}
+
+.bg-light{
+    background-color: #fff;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.p-galleria .p-galleria-thumbnail-container{
+    background: none;
+}
+
+.btn {
+    padding: 15px 25px;
+}
+
+.p-rating .p-rating-icon{
+    color: #ffd200;
+}
+
+.text-header-section{
+    text-align: center;
+    font-size: 40px;
+}
+
+.p-carousel .p-carousel-content .p-carousel-prev, .p-carousel .p-carousel-content .p-carousel-next {
+    width: 3.5rem;
+    height: 3.5rem;
+
+    .p-icon {
+        width: 3rem;
+        height: 3rem;
+        color: #ffd200;
+    }
+}
+
+.ol-attribution{
+    display: none;
+
+    button{
+        padding: 3px 10px;
+        border-radius: 50%;
+    }
+
+    ul{
+        display: flex;
+        visibility: hidden;
+
+        li{
+            color: #fff;
+            font-size: 12px;
+        }
+    }
+}
+.ol-rotate{
+    display: none;
+}
+
+.ol-zoom{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin: 10px;
+
+    button{
+        width: 40px;
+        flex-grow: 0;
+        font-size: 18px;
+        padding: 3px 10px;
+        font-weight: 600;
+        color: #fff;
+        background-color: #000;
+        border: 2px solid #ffd200;
+
+        &:hover{
+            color: #000;
+            background-color: #ffd200;
+        }
+    }
+}
+
+[data-animation="up"]{
+    opacity: 0;
+    transform: translateY(100%);
+    transition: .9s ease-out .9s;
+
+    --opacity: 1;
+    --transform: translateY(0);
+}
+
+[data-animation="show"]{
+    opacity: 0.4;
+    transform: scale(0);
+    transition: 1.2s ease-in-out .1s;
+
+    --opacity: 1;
+    --transform: scale(1);
+}
+
+.unset{
+    opacity: var(--opacity);
+    transform: var(--transform);
+}
