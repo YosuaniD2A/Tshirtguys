@@ -22,13 +22,13 @@ export class MapSectionComponent implements OnInit{
   private markerSource: VectorSource = new VectorSource();
   private map!: Map;
 
-  selectedStyle: string = 'AerialWithLabelsOnDemand';
+  selectedStyle: string = 'RoadOnDemand';
   layers: any[] = [];
   styles: string[] = [
-    'AerialWithLabelsOnDemand',
     'RoadOnDemand',
-    'Aerial',
     'CanvasDark',
+    'AerialWithLabelsOnDemand',
+    'Aerial',
   ];
 
   ngOnInit() {
@@ -58,7 +58,7 @@ export class MapSectionComponent implements OnInit{
       target: 'map',
       view: new View({
         center: fromLonLat([-116.6016498706668, 31.814127241672196]),
-        zoom: 17,
+        zoom: 16,
       }),
     });
 
