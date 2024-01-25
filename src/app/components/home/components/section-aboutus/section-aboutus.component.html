@@ -1,5 +1,5 @@
-<section id="section-about" class="aboutus-section bg-light py-8">
-  <div class="container flex flex-column gap-5 align-items-center">
+<section id="section-about" class="aboutus-section bg-light pt-2 pb-8">
+  <!-- <div class="container flex flex-column gap-5 align-items-center">
     <div class="text-header">
       <h2 class="text-header-section" data-animation="show">About Us</h2>
     </div>
@@ -23,23 +23,8 @@
         <span class="tiny-border"></span>
       </div>
     </span>
-  </div>
+  </div> -->
   <div class=" mt-8">
-    <!-- <p-galleria [value]="images" [responsiveOptions]="responsiveOptions" [containerStyle]="{ 'max-width': '100%' }" [numVisible]="5">
-            <ng-template pTemplate="thumbnail" let-item>
-                <div class="grid grid-nogutter justify-content-center">
-                    <img class="img-tumbnail" src="assets/image/{{item}}.png" width="250px" />
-                </div>
-            </ng-template>
-        </p-galleria> -->
-    <!-- <div class="marquee-container">
-            <div class="marquee-content">
-                <div *ngFor="let item of images">
-                    <img src="assets/image/{{item}}.png" />
-                </div>
-            </div>
-        </div> -->
-
     <div class="marquee-container">
       <div class="marquee-content" (mouseover)="pauseMarquee()" (mouseleave)="playMarquee()">
         <div class="container-img" *ngFor="let item of images">

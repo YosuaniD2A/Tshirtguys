@@ -3,7 +3,7 @@
         <div class="container flex justify-content-between align-items-center">
             <div class="address flex gap-2 align-items-center">
                 <i class="pi pi-map-marker" style="font-size: 1rem"></i>
-                <span>Ave. Independecia No.1245, Mexico</span>
+                <span>C. Huerta 282, 22895 Ensenada, B.C., Mexico</span>
             </div>
             <div class="sheduler flex gap-2 align-items-center">
                 <i class="pi pi-clock" style="font-size: 1rem"></i>
@@ -35,25 +35,25 @@
             <!-- mainmenu begin -->
             <nav class="flex">
                 <ul id="mainmenu" class="menu" [ngClass]="{'menu-show': showMenu}">
-                    <li><a routerLink="/home" class="active">Home</a></li>
+                    <li class=""><a routerLink="/home" class="active">Home</a></li>
                     <li class="menu-aboutus"><a class="flex gap-2 align-items-center"
-                            [ngClass]="{'text-light': scrollPosition !== 0}" (click)="navigateTo('section-about')"
+                            [ngClass]="{'text-light': scrollPosition !== 0}" (click)="navigateTo('section-ourservices')"
                             (mouseover)="showDropdown('aboutUsDropdown')">
-                            About Us
+                            Our Services
                             <i class="fa-solid fa-angle-down"></i>
                         </a>
-                        <ul [ngClass]="scrollPosition !== 0 ? 'dropdown-menu-dark' : 'dropdown-menu-light'"
+                        <ul class="submenu" [ngClass]="scrollPosition !== 0 ? 'dropdown-menu-dark' : 'dropdown-menu-light'"
                             *ngIf="showAboutUsDropdown">
-                            <li><a (click)="navigateTo('section-ourservices')">Our Services</a></li>
-                            <li><a (click)="navigateTo('section-ourworkflow')">Our Work Process</a></li>
-                            <li><a (click)="navigateTo('section-happyclients')">Our Happy Customers</a></li>
+                            <!-- <li><a (click)="navigateTo('section-ourservices')">Our Services</a></li> -->
+                            <li class=""><a (click)="navigateTo('section-ourworkflow')">Our Work Process</a></li>
+                            <li class=""><a (click)="navigateTo('section-happyclients')">Our Happy Customers</a></li>
                         </ul>
                     </li>
-                    <li><a [ngClass]="{'text-light': scrollPosition !== 0}" href="https://tshirtguys.espwebsite.com/"
+                    <li class=""><a [ngClass]="{'text-light': scrollPosition !== 0}" href="https://tshirtguys.espwebsite.com/"
                             target="_blank">Promotional Products</a></li>
-                    <li><a routerLink="/contact" [ngClass]="{'text-light': scrollPosition !== 0}">Contact</a></li>
-                    <li><a class="btn btn-free-quote" [ngClass]="{'text-light': scrollPosition !== 0}"
-                            (click)="toggleModel()">Request your Free Quote</a></li>
+                    <li class=""><a routerLink="/contact" [ngClass]="{'text-light': scrollPosition !== 0}">Contact</a></li>
+                    <li class=""><a class="btn btn-free-quote" [ngClass]="{'text-light': scrollPosition !== 0}"
+                            (click)="toggleModel()">Request Quote</a></li>
                     
                 </ul>
                 <i [ngClass]="{'text-light': scrollPosition !== 0}" class="fa-solid fa-bars" (click)="toggleMenu()"></i>
@@ -79,19 +79,24 @@
                     <h2 class="text-center">Get a Quote</h2>
                     <form action="">
                         <div class="formgrid grid">
-                            <div class="field col-12">
-                                <label for="firstname6">Full Name</label>
-                                <input id="firstname6" type="text"
+                            <div class="field col-12 md:col-6">
+                                <label for="companyName">Company</label>
+                                <input id="companyName" type="text"
                                     class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
                             </div>
                             <div class="field col-12 md:col-6">
-                                <label for="firstname6">Email</label>
-                                <input id="firstname6" type="text"
+                                <label for="contactName">Contact name</label>
+                                <input id="contactName" type="text"
                                     class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
                             </div>
                             <div class="field col-12 md:col-6">
-                                <label for="lastname6">Phone</label>
-                                <input id="lastname6" type="text"
+                                <label for="email">Email</label>
+                                <input id="email" type="text"
+                                    class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+                            </div>
+                            <div class="field col-12 md:col-6">
+                                <label for="phone">Phone</label>
+                                <input id="phone" type="text"
                                     class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
                             </div>
                             <div class="field col-12 md:col-6">
@@ -155,15 +160,19 @@
                                 <div class="flex justify-content-between flex-wrap">
                                     <div class="flex align-items-center gap-1">
                                         <p-checkbox class="p-2" name="groupname" value="val1"></p-checkbox>
-                                        <label for="la">Folding</label>
+                                        <label for="la">Screen printing</label>
                                     </div>
                                     <div class="flex align-items-center gap-1">
                                         <p-checkbox class="p-2" name="groupname" value="val1"></p-checkbox>
-                                        <label for="la">Polybag</label>
+                                        <label for="la">DTG</label>
                                     </div>
                                     <div class="flex align-items-center gap-1">
                                         <p-checkbox class="p-2" name="groupname" value="val1"></p-checkbox>
-                                        <label for="la">Necklabel</label>
+                                        <label for="la">Packaging</label>
+                                    </div>
+                                    <div class="flex align-items-center gap-1">
+                                        <p-checkbox class="p-2" name="groupname" value="val1"></p-checkbox>
+                                        <label for="la">Promotional products</label>
                                     </div>
                                 </div>
                             </div>

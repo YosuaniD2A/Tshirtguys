@@ -28,7 +28,6 @@ import { SplitWordsPipe } from './pipes/split-words.pipe';
 import { SectionQualityCertifiedComponent } from './components/home/components/section-quality-certified/section-quality-certified.component';
 import { InputTextModule } from 'primeng/inputtext';
 import { ContactPageComponent } from './components/contact-page/contact-page.component';
-import { QuotePageComponent } from './components/quote-page/quote-page.component';
 import { PresentationSectionComponent } from './components/contact-page/components/presentation-section/presentation-section.component';
 import { InfoSectionComponent } from './components/contact-page/components/info-section/info-section.component';
 import { MapSectionComponent } from './components/contact-page/components/map-section/map-section.component';
@@ -36,7 +35,6 @@ import { DialogModule } from 'primeng/dialog';
 import { MenuModule } from 'primeng/menu';
 import { FaqComponent } from './components/home/components/section-faq/faq.component';
 import { AccordionModule } from 'primeng/accordion';
-import { FreeQuotesModalComponent } from './shared/top-bars/components/free-quotes-modal/free-quotes-modal.component';
 import { CheckboxModule } from 'primeng/checkbox';
 import { SectionPricingComponent } from './components/home/components/section-pricing/section-pricing.component';
 import { DividerModule } from 'primeng/divider';
@@ -62,12 +60,10 @@ import { DropdownModule } from 'primeng/dropdown';
     SplitWordsPipe,
     SectionQualityCertifiedComponent,
     ContactPageComponent,
-    QuotePageComponent,
     PresentationSectionComponent,
     InfoSectionComponent,
     MapSectionComponent,
     FaqComponent,
-    FreeQuotesModalComponent,
     SectionPricingComponent,
     SectionCalcPriceComponent,
   ],
