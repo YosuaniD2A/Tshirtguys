@@ -1,3 +1,25 @@
+.direct-to-garment{
+    width: 100%;
+    // background-image: url('https://img.freepik.com/foto-gratis/imprenta-moderna-produce-impresiones-multicolores-generadas-precision-ia_188544-15381.jpg?w=1380&t=st=1697752408~exp=1697753008~hmac=b54b72bc011c43d31e054b4fa6c25c493daf8389a5236f4072bc94d9782a74c9');
+    background-image: url('../../../../../assets/image/ts-bg.png');
+    // background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.capa{
+    // backdrop-filter: blur(1px);
+    // background-color: rgba(32, 31, 31, 0.367);
+}
+
+.text-dark{
+    color: #2a2a2a;
+}
+
+.text-light{
+    color: #ffffff;
+}
 
 .custom-marker{
     border-radius: 50%;
@@ -56,4 +78,69 @@
 
 .img-agent{
     transform: translateY(7px);
+}
+
+.section-content{
+    align-items: center;
+    // -webkit-box-align: center;
+    // align-items: center;
+    // gap: 4rem 2rem;
+    // grid-template-columns: [full-start] 0px [main-start] repeat(12, 1fr) [main-end] 0px [full-end];
+    // display: grid;
+    // padding-bottom: 5rem;
+    // padding-top: 0rem;
+
+    // @media screen and (min-width: 64em){
+    //     padding-top: 7rem;
+    //     padding-bottom: 7rem;
+    // }
+
+    // @media screen and (min-width: 48em){
+    //     gap: 5rem;
+    // }
+    
+}
+
+.section-text{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    // order: 0;
+    // grid-column: main;
+    // grid-template-columns: 1fr;
+
+    // @media screen and (min-width: 64em){
+    //     grid-column: 2 / span 5; 
+    //     order: 0;
+    // }
+
+    .dtg-attributes{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 10px;
+        list-style: none;
+        padding: 5px;
+        
+    }
+}
+
+.two-image {
+    padding: 8px 8px 0px;
+    -webkit-box-align: end;
+    align-items: end;
+    grid-column: full;
+    grid-template-columns: 1fr;
+    display: grid;
+
+    @media screen and (min-width: 64em){
+        grid-column: 8 / span 7;
+    }
+
+    @media screen and (min-width: 36em){
+        grid-template-columns: 3fr 2fr;
+    }
+
 }

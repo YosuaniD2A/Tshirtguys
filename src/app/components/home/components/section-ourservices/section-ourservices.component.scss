@@ -1,10 +1,11 @@
 .ourservices{
     width: 100%;
+    background-color: #ffffff;
     // background-image: url('https://img.freepik.com/foto-gratis/imprenta-moderna-produce-impresiones-multicolores-generadas-precision-ia_188544-15381.jpg?w=1380&t=st=1697752408~exp=1697753008~hmac=b54b72bc011c43d31e054b4fa6c25c493daf8389a5236f4072bc94d9782a74c9');
-    background-image: url('../../../../../assets/image/banner3.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
+    // background-image: url('../../../../../assets/image/banner3.jpg');
+    // background-attachment: fixed;
+    // background-size: cover;
+    // background-position: center;
 
     .pi-check{
         font-weight: 900;
@@ -13,12 +14,16 @@
 }
 
 .capa{
-    backdrop-filter: blur(1px);
-    background-color: rgba(32, 31, 31, 0.367);
+    // backdrop-filter: blur(1px);
+    // background-color: rgba(32, 31, 31, 0.367);
+}
+
+.text-dark{
+    color: #2a2a2a;
 }
 
 .text-light{
-    color: #fff;
+    color: #ffffff;
 }
 
 .btn-service{
@@ -26,11 +31,11 @@
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
-    color: #fff;
-    border: 2px solid #fff;
+    color: #2a2a2a;
+    border: 2px solid #2a2a2a;
     //max-width: 150px;
     display: inline-block;
-    transition: ease 1s all;
+    // transition: ease 1s all;
 
     &:hover{
         color: #333;
