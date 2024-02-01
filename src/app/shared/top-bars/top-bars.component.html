@@ -45,14 +45,14 @@
                         <ul class="submenu" [ngClass]="scrollPosition !== 0 ? 'dropdown-menu-dark' : 'dropdown-menu-light'"
                             *ngIf="showAboutUsDropdown">
                             <!-- <li><a (click)="navigateTo('section-ourservices')">Our Services</a></li> -->
-                            <li class=""><a (click)="navigateTo('section-ourworkflow')">Our Work Process</a></li>
-                            <li class=""><a (click)="navigateTo('section-happyclients')">Our Happy Customers</a></li>
+                            <li class="submenu-item"><a (click)="navigateTo('section-ourworkflow')">Direct To Garment</a></li>
+                            <li class="submenu-item"><a (click)="navigateTo('section-happyclients')">Our Happy Customers</a></li>
                         </ul>
                     </li>
                     <li class=""><a [ngClass]="{'text-light': scrollPosition !== 0}" href="https://tshirtguys.espwebsite.com/"
                             target="_blank">Promotional Products</a></li>
                     <li class=""><a routerLink="/contact" [ngClass]="{'text-light': scrollPosition !== 0}">Contact</a></li>
-                    <li class=""><a class="btn btn-free-quote" [ngClass]="{'text-light': scrollPosition !== 0}"
+                    <li class=""><a class="btn btn-free-quote slide_right" [ngClass]="{'text-light': scrollPosition !== 0}"
                             (click)="toggleModel()">Request Quote</a></li>
                     
                 </ul>

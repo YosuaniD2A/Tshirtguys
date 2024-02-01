@@ -1,15 +1,123 @@
-.bg1{
-    background-image: url('https://fos.com.mx/cdn/shop/files/b0-min.jpg?v=1692656789&width=2000');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+.bg1 {
+  // background-image: url('https://fos.com.mx/cdn/shop/files/b0-min.jpg?v=1692656789&width=2000');
+  background-image: url('../../../../../assets/image/change1.png');
+  // background-position: center;
+  background-repeat: no-repeat;
+  background-size: 800px 800px;
+  background-attachment: local;
 }
 
-.bg2{
-    background-image: url('https://fos.com.mx/cdn/shop/files/b2-min.jpg?v=1692656903&width=2000');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+.bg2 {
+  // background-image: url('https://fos.com.mx/cdn/shop/files/b2-min.jpg?v=1692656903&width=2000');
+  background-image: url('../../../../../assets/image/splash.jpg');
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  background-size: 500px 500px;
+  background-attachment: local;
+
+}
+
+.bg-splash{
+  background-image: url('../../../../../assets/image/brush_yellow.png');
+  background-position: -30px -90px;
+  background-repeat: no-repeat;
+  background-size: 800px 800px;
+  background-attachment: local;
+}
+
+.fade-in-out {
+  // position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.section-text {
+  width: 80%;
+  font-size: 22px;
+  color: #2a2a2a;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  transform: translateX(1000px);
+
+
+  .dtg-attributes {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    padding: 5px;
+
+  }
+}
+
+.change-images{
+  transform: translateX(-1000px)
+}
+
+.slide-in-left {
+	-webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+.slide-in-right {
+	-webkit-animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
 }

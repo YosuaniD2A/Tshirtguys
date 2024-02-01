@@ -1,7 +1,7 @@
 .bg-image{
-    background-image: url('https://img.freepik.com/foto-gratis/hombre-que-trabajaba-imprenta-papel-pinturas_1303-26597.jpg?w=1380&t=st=1697823771~exp=1697824371~hmac=14f710e46b97d37ab31267b5b4e330ec0a5dc60902a4eb783526dd0e5003a4b8');
+    background-image: url('../../../../../assets/image/banner3.jpg');
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: local;
     background-size: cover;
 }
 
@@ -10,9 +10,17 @@
 }
 
 .texto-sobre-fondo {
-    backdrop-filter: blur(10px); /* Ajusta el valor de desenfoque según tus preferencias */
-    background-color: rgba(255, 255, 255, 0.5); /* Ajusta el color de fondo y la opacidad según tus preferencias */
-    padding: 20px;
+    backdrop-filter: blur(1px); /* Ajusta el valor de desenfoque según tus preferencias */
+    background-color: rgba(232, 228, 228, 0.104); /* Ajusta el color de fondo y la opacidad según tus preferencias */
+    // padding: 20px;
+}
+
+.text-dark{
+  color: #2a2a2a;
+}
+
+.text-item{
+  font-size: 20px;
 }
 
 .relative {

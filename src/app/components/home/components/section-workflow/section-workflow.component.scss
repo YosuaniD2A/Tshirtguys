@@ -1,16 +1,17 @@
 .direct-to-garment{
     width: 100%;
     // background-image: url('https://img.freepik.com/foto-gratis/imprenta-moderna-produce-impresiones-multicolores-generadas-precision-ia_188544-15381.jpg?w=1380&t=st=1697752408~exp=1697753008~hmac=b54b72bc011c43d31e054b4fa6c25c493daf8389a5236f4072bc94d9782a74c9');
-    background-image: url('../../../../../assets/image/ts-bg.png');
+    background-image: url('../../../../../assets/image/PORTADAS SKETCH5.png');
     // background-attachment: fixed;
-    background-size: cover;
+    background-size: 1200px 600px;
+    background-repeat: no-repeat;
     background-position: center;
 
 }
 
 .capa{
-    // backdrop-filter: blur(1px);
-    // background-color: rgba(32, 31, 31, 0.367);
+    backdrop-filter: blur(1px);
+    background-color: rgba(232, 228, 228, 0.104); 
 }
 
 .text-dark{
@@ -103,6 +104,7 @@
 
 .section-text{
     width: 80%;
+    font-size: 22px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
