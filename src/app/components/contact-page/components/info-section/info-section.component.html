@@ -1,5 +1,5 @@
 <section class="py-7 grid">
-    <div class="col-12 md:col-6 p-5 flex flex-column gap-3 justify-content-center align-items-center">
+    <div class="info-left col-12 md:col-6 p-5 flex flex-column gap-3 justify-content-center align-items-center" [class.slide-in-left]="visible1">
         <h1 class="text-header-section mb-5">tShirtGuys Main Office</h1>
         <div class="flex gap-5">
             <div class="pb-3 flex flex-column gap-4 align-items-start">
@@ -33,7 +33,7 @@
         </div>
         <span><strong>Ensenada Baja California, México.</strong></span>
     </div>
-    <div class="col-12 md:col-6 p-5">
+    <div class="info-right col-12 md:col-6 p-5" [class.slide-in-right]="visible2">
         <h1 class="text-header-section mb-5">Locations We Serve</h1>
         <div class="flex gap-8 flex-wrap justify-content-center">
             <div class="flex flex-column align-items-center">

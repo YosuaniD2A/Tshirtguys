@@ -4,14 +4,14 @@
             <!-- <div class="text-header">
                 <h2 class="text-header-section text-dark">Frequently Asked Questions</h2>
             </div> -->
-            <div class="text-header flex flex-column  align-items-center">
+            <div class="text-header flex flex-column  align-items-center" [class.fade-in-bottom]="visible1">
               <h1 class="text-header-section text-dark">Frequently Asked Questions</h1>
               <img src="../../../../../assets/image/underline2.png" width="300px" alt="">
           </div>
-            <p class="w-6 text-dark text-center">
+            <p class="middle-text w-6 text-dark text-center" [class.fade-in-bottom]="visible2">
                 We are here to serve you, any questions you can send us an email to info@tshirtguys.com and do not forget to review the information that we provide below.
             </p>
-            <div class="flex gap-4 flex-column align-items-start justify-content-center" >
+            <div class="accordion flex gap-4 flex-column align-items-start justify-content-center" [class.fade-in-bottom]="visible3">
                 <div class="accordion-item flex flex-column gap-0" *ngFor="let item of accordionItems; let i = index">
                   <div class="accordion-header" (click)="toggleAccordion(i)">
                     {{ item.title }}

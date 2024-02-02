@@ -11,16 +11,15 @@
     </div> -->
     <div class="container">
         <div class="flex gap-5 align-items-center">
-            <div class="change-images bg-splash" [class.slide-in-left]= "slideActive">
+            <div class="change-images bg-splash" [class.slide-in-left]="visible2">
                 <img
                 [src]="images[currentImageIndex]"
-                
                 [class.visible]="!fadeInOut"
                 width="700px"
               />
             </div>
             <div>
-                <div class="section-text"  [class.slide-in-right]= "slideActive">
+                <div class="section-text"  [class.fade-in-bottom]="visible2">
                     <h1 class="text-header-section text-dark">Choose Your Own Style</h1>
                     <p class="text-dark">Discover Limitless Style Possibilities at tShirtguys Create Your Own Fashion Statement with Customized T-Shirts. 
                         Unleash Your Imagination, Design Your Dream Tee Today</p>

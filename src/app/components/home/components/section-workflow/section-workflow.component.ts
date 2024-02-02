@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef } from '@angular/core';
+import { OnInit, Component, ElementRef } from '@angular/core';
 import { AnimationsService } from 'src/app/services/animations.service';
 
 interface EventItem {
@@ -14,9 +14,10 @@ interface EventItem {
   templateUrl: './section-workflow.component.html',
   styleUrls: ['./section-workflow.component.scss']
 })
-export class SectionWorkflowComponent implements AfterViewInit {
+export class SectionWorkflowComponent implements OnInit {
 
-  private textHeaders!: NodeListOf<Element>;
+  visible1 = false;
+  visible2 = false;
 
   events: EventItem[];
 
@@ -32,8 +33,31 @@ export class SectionWorkflowComponent implements AfterViewInit {
     ];
   }
 
-  ngAfterViewInit() {
-    this.textHeaders = this.elementRef.nativeElement.querySelectorAll('.text-header');
-    this.animationService.observeTextHeaders(this.textHeaders);
+  ngOnInit() {
+    this.animationService.observe(
+      this.elementRef.nativeElement.querySelector('.section-text'),
+      () => {
+        this.applyAnimationClass(1);
+      }
+    );
+    this.animationService.observe(
+      this.elementRef.nativeElement.querySelector('.two-image'),
+      () => {
+        this.applyAnimationClass(2);
+      }
+    );
+  }
+
+  private applyAnimationClass(elementNumber: number): void {
+    switch (elementNumber) {
+      case 1:
+        this.visible1 = true;
+        break;
+      case 2:
+        this.visible2 = true;
+        break;
+      default:
+        break;
+    }
   }
 }

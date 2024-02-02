@@ -10,9 +10,9 @@ import { AnimationsService } from 'src/app/services/animations.service';
 export class SectionHappyClientsComponent implements OnInit {
 
   value: number = 5;
+  visible1 = false;
+  visible2 = false;
 
-  private textHeaders!: NodeListOf<Element>;
-  
   responsiveOptions: any[] | undefined;
 
   constructor(
@@ -20,10 +20,7 @@ export class SectionHappyClientsComponent implements OnInit {
     private animationService: AnimationsService
   ) { }
 
-  ngAfterViewInit() {
-    this.textHeaders = this.elementRef.nativeElement.querySelectorAll('.text-header');
-    this.animationService.observeTextHeaders(this.textHeaders);
-  }
+
 
   clients: any[] = [
     {
@@ -31,7 +28,7 @@ export class SectionHappyClientsComponent implements OnInit {
       code: "f230fh0g3",
       name: "Amr Zain",
       busniess: "Logistics Co-Ordinator",
-      brief:"Excelent products",
+      brief: "Excelent products",
       description: `I am very grateful to work with such an amazing company as t-ShirtsGuys, they are very professional and fast in response to our Purchase orders. Whenever I need anything or question, usually Angie Gutiérrez assists with most very fast and gets my questions answered very quickly.
       I would give 10 stars for the great service and amazing people at t-ShirtsGuys.`,
       image: "bamboo-watch.jpg",
@@ -42,7 +39,7 @@ export class SectionHappyClientsComponent implements OnInit {
       code: "nvklal433",
       name: "Mallory Jonson",
       busniess: "Manager",
-      brief:"Excelent products",
+      brief: "Excelent products",
       description: `I have been working with tShirtGuys the whole 8+ years I have been with my company. 
       They are competitively priced and handle all import/export for us. Turnaround is fast and they are good at rushing products when necessary. They provide detailed packing lists upon shipment and give clear communication on shortages with raw goods or other issues that arise. My whole team enjoys working with Angie and George.`,
       image: "black-watch.jpg",
@@ -53,7 +50,7 @@ export class SectionHappyClientsComponent implements OnInit {
       code: "zz21cz3c1",
       name: "Blue Band",
       busniess: "Marketing gerent",
-      brief:"Excelent products",
+      brief: "Excelent products",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur harum rerum, vitae provident maiores quas dolorem fuga molestias nostrum molestiae quod pariatur corrupti facilis. Voluptates, distinctio voluptatibus? Ducimus, accusamus placeat?",
       image: "blue-band.jpg",
       rating: 3
@@ -63,7 +60,7 @@ export class SectionHappyClientsComponent implements OnInit {
       code: "244wgerg2",
       name: "Blue T-Shirt",
       busniess: "Busniess people",
-      brief:"Excelent products",
+      brief: "Excelent products",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur harum rerum, vitae provident maiores quas dolorem fuga molestias nostrum molestiae quod pariatur corrupti facilis. Voluptates, distinctio voluptatibus? Ducimus, accusamus placeat?",
       image: "blue-t-shirt.jpg",
       rating: 5
@@ -89,22 +86,50 @@ export class SectionHappyClientsComponent implements OnInit {
   ];
 
   ngOnInit() {
+
+    this.animationService.observe(
+      this.elementRef.nativeElement.querySelector('.text-header'),
+      () => {
+        this.applyAnimationClass(1);
+      }
+    );
+
+    this.animationService.observe(
+      this.elementRef.nativeElement.querySelector('.caroucel'),
+      () => {
+        this.applyAnimationClass(2);
+      }
+    );
+
     this.responsiveOptions = [
-        {
-            breakpoint: '1199px',
-            numVisible: 3,
-            numScroll: 3
-        },
-        {
-            breakpoint: '991px',
-            numVisible: 2,
-            numScroll: 2
-        },
-        {
-            breakpoint: '767px',
-            numVisible: 1,
-            numScroll: 1
-        }
+      {
+        breakpoint: '1199px',
+        numVisible: 3,
+        numScroll: 3
+      },
+      {
+        breakpoint: '991px',
+        numVisible: 2,
+        numScroll: 2
+      },
+      {
+        breakpoint: '767px',
+        numVisible: 1,
+        numScroll: 1
+      }
     ];
-}
+  }
+
+  private applyAnimationClass(elementNumber: number): void {
+    switch (elementNumber) {
+      case 1:
+        this.visible1 = true;
+        break;
+      case 2:
+        this.visible2 = true;
+        break;
+      default:
+        break;
+    }
+  }
 }

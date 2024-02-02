@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef } from '@angular/core';
+import { OnInit, Component, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { AnimationsService } from 'src/app/services/animations.service';
 
@@ -7,18 +7,54 @@ import { AnimationsService } from 'src/app/services/animations.service';
   templateUrl: './section-ourservices.component.html',
   styleUrls: ['./section-ourservices.component.scss']
 })
-export class SectionOurservicesComponent implements AfterViewInit {
+export class SectionOurservicesComponent implements OnInit {
 
-  private textHeaders!: NodeListOf<Element>;
+  visible1 = false;
+  visible2 = false;
+  visible3 = false;
 
   constructor(
     private elementRef: ElementRef,
     private animationService: AnimationsService,
     private router: Router) { }
 
-  ngAfterViewInit() {
-    this.textHeaders = this.elementRef.nativeElement.querySelectorAll('.text-header');
-    this.animationService.observeTextHeaders(this.textHeaders);
+  ngOnInit() {
+    this.animationService.observe(
+      this.elementRef.nativeElement.querySelector('.text-summary'),
+      () => {
+        this.applyAnimationClass(1);
+      }
+    );
+
+    this.animationService.observe(
+      this.elementRef.nativeElement.querySelector('.text-header'),
+      () => {
+        this.applyAnimationClass(2);
+      }
+    );
+
+    this.animationService.observe(
+      this.elementRef.nativeElement.querySelector('.services'),
+      () => {
+        this.applyAnimationClass(3);
+      }
+    );
+  }
+
+  private applyAnimationClass(elementNumber: number): void {
+    switch (elementNumber) {
+      case 1:
+        this.visible1 = true;
+        break;
+      case 2:
+        this.visible2 = true;
+        break;
+      case 3:
+        this.visible3 = true;
+        break;
+      default:
+        break;
+    }
   }
 
   scrollToSection(section: string) {

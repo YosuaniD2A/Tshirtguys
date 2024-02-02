@@ -24,16 +24,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
       this.primengConfig.ripple = true;
-  }
-
-  ngAfterViewInit() {
-    this.renderer.listen(this.window, 'scroll', (event) => {
-      const scrollPosition = this.window.scrollY;
-      this.scrollPosition = scrollPosition
-    });
-
-    this.textHeaders = this.elementRef.nativeElement.querySelectorAll('.text-header');
-    this.animationService.observeTextHeaders(this.textHeaders);
+      this.scrollToTop();
   }
 
   scrollToTop() {

@@ -1,7 +1,9 @@
 <section class="bg-color py-5">
         <div class="container flex flex-column justify-content-center gap-7">
-            <h1 class="text-header-section text-cian">Quality certified for known brands/stores</h1>
-            <div class="flex flex-wrap gap-5 justify-content-evenly align-items-center">
+            <div class="text-header" [class.fade-in-bottom]="visible1">
+                <h1 class="text-header-section text-cian">Quality certified for known brands/stores</h1>
+            </div>
+            <div class="brands flex flex-wrap gap-5 justify-content-evenly align-items-center" [class.fade-in-bottom]="visible2">
                 <img class="img-brand" src="assets/image/amazon.png" alt="">
                 <img class="img-brand" src="assets/image/walmart.png" alt="">
                 <img class="img-brand" src="assets/image/disney.png" alt="">

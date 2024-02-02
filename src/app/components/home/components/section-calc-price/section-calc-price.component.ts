@@ -40,8 +40,8 @@ export class SectionCalcPriceComponent implements OnInit, AfterViewInit, OnChang
   ) { }
 
   ngAfterViewInit() {
-    this.textHeaders = this.elementRef.nativeElement.querySelectorAll('.text-header');
-    this.animationService.observeTextHeaders(this.textHeaders);
+    // this.textHeaders = this.elementRef.nativeElement.querySelectorAll('.text-header');
+    // this.animationService.observeTextHeaders(this.textHeaders);
   }
 
   ngOnInit() {

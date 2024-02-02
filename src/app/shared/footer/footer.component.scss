@@ -1,78 +1,93 @@
-.bg-dark{
+.bg-dark {
     // background-color: rgb(76, 76, 76); 
-    background-image: linear-gradient(to right, #434343 0%, black 100%);;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    ;
 }
 
-.footer-section{
+.footer-section {
     // z-index: 100;
     position: relative;
     width: 100%;
     // overflow: hidden;
 }
 
-.wave{
+.wave {
     // z-index: 101;
     position: absolute;
     top: 0px;
     left: 0;
     width: 100%;
     height: 170px;
-    background-image: url(../../../assets/image/wave-4.png) ;
+    background-image: url(../../../assets/image/wave-4.png);
     background-size: 100% auto;
     background-repeat: no-repeat;
     // background-position: top center
 }
 
-.text-light{
+.text-light {
     color: #fff;
 }
 
-.links li{
+.links li {
     list-style: none;
     margin-left: 10px;
 
-    a{
+    a {
         text-decoration: none;
         color: #fff;
         margin-left: 10px;
 
-        &:hover{
+        &:hover {
             color: #ffd200;
         }
     }
 
-    &:hover{
+    &:hover {
         color: #ffd200;
         transform: translateX(10px);
     }
 }
 
-.suscribe-form{
+.suscribe-form {
 
-    .input-suscribe{
+    .input-suscribe {
         padding: 5px 10px;
         width: 300px;
     }
 
-    .btn-suscribe{
-        border: 2px solid #ffd200;
+    .btn-suscribe {
+        // border: 2px solid #ffd200;
+        // text-decoration: none;
+        // color: #fff;
+        color: #fff !important;
         text-decoration: none;
-        color: #fff;
+        
+        border: 2px solid #ffd200;
+        cursor: pointer;
+        box-shadow: inset 0 0 0 0 #ffd200;
+        -webkit-transition: ease-out 0.4s;
+        -moz-transition: ease-out 0.4s;
+        transition: ease-out 0.4s;
+    }
+
+    .slide_right:hover {
+        color: #2a2a2a !important;
+        font-weight: 500;
+        box-shadow: inset 400px 0 0 0 #ffd200;
     }
 }
 
-.social-media{
-    i{
-        &:hover{
+.social-media {
+    i {
+        &:hover {
             color: #ffd200;
             transform: scale(1.2);
         }
     }
 }
 
-.copyright{
+.copyright {
     background-color: #111010;
     color: #fff;
     text-align: center;
 }
-

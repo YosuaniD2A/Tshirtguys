@@ -3,7 +3,7 @@
         <div class="flex flex-column align-items-center gap-7">
             <div class="grid section-content">
                 <div class="col-6 ">
-                    <div class="section-text">
+                    <div class="section-text" [class.fade-in-bottom]="visible1">
                         <h1 class="text-header-section text-dark">Direct To Garment</h1>
                         <p class="text-dark">Direct-to-Garment (DTG) printing service brings your designs to life with
                             precision, quality, and ease.
@@ -38,7 +38,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-6 two-image">
+                <div class="col-6 two-image" [class.slide-in-fwd-right]="visible2">
                     <img src="../../../../../assets/image/camiseta_aves_.jpg" width="100%" height="auto" alt="">
                     <img src="../../../../../assets/image/paleta horizontal_.jpg" width="100%" height="auto" alt="">
                 </div>

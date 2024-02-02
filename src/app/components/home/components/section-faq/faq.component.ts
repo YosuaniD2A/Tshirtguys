@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef} from '@angular/core';
+import { Component, ElementRef, OnInit} from '@angular/core';
 import { AnimationsService } from 'src/app/services/animations.service';
 
 
@@ -7,9 +7,11 @@ import { AnimationsService } from 'src/app/services/animations.service';
   templateUrl: './faq.component.html',
   styleUrls: ['./faq.component.scss']
 })
-export class FaqComponent implements AfterViewInit {
+export class FaqComponent implements OnInit {
 
-  private textHeaders!: NodeListOf<Element>;
+  visible1 = false;
+  visible2 = false;
+  visible3 = false;
   accordionItems = [
     {
       title: 'Do you offer blank apparel?',
@@ -54,9 +56,43 @@ export class FaqComponent implements AfterViewInit {
     private animationService: AnimationsService
   ) { }
 
-  ngAfterViewInit() {
-    this.textHeaders = this.elementRef.nativeElement.querySelectorAll('.text-header');
-    this.animationService.observeTextHeaders(this.textHeaders);
+  ngOnInit() {
+    this.animationService.observe(
+      this.elementRef.nativeElement.querySelector('.text-header'),
+      () => {
+        this.applyAnimationClass(1);
+      }
+    );
+
+    this.animationService.observe(
+      this.elementRef.nativeElement.querySelector('.middle-text'),
+      () => {
+        this.applyAnimationClass(2);
+      }
+    );
+
+    this.animationService.observe(
+      this.elementRef.nativeElement.querySelector('.accordion'),
+      () => {
+        this.applyAnimationClass(3);
+      }
+    );
+  }
+
+  private applyAnimationClass(elementNumber: number): void {
+    switch (elementNumber) {
+      case 1:
+        this.visible1 = true;
+        break;
+      case 2:
+        this.visible2 = true;
+        break;
+      case 3:
+        this.visible3 = true;
+        break;
+      default:
+        break;
+    }
   }
 
   toggleAccordion(index: number) {

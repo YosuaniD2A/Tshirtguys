@@ -1,17 +1,17 @@
 <section id="section-ourservices" class="ourservices">
     <div class="capa py-8">
         <div class="container flex flex-column justify-content-center gap-7">
-            <div class="container w-7 py-6">
-                <p class="text-summary text-center">Professional screen printing service for your specific needs. With over 30 years in the business, it's safe to say, we are tShirtGuys!</p>
+            <div class="container w-7 py-4">
+                <p class="text-summary text-center" [class.fade-in-bottom]="visible1">Professional screen printing service for your specific needs. With over 30 years in the business, it's safe to say, we are tShirtGuys!</p>
             </div>
             <!-- <div class="text-header">
                 <h1 class="text-header-section text-dark">Our Services</h1>
             </div> -->
-            <div class="text-header flex flex-column  align-items-center">
+            <div class="text-header py-4 flex flex-column align-items-center" [class.fade-in-bottom]="visible2">
                 <h1 class="text-header-section text-dark">Our Services</h1>
                 <img src="../../../../../assets/image/underline2.png" width="200px" alt="">
             </div>
-            <div class="services grid">
+            <div class="services py-4 grid" [class.fade-in-bottom]="visible3">
                 <div class="col-12 md:col-6 lg:col-3 flex gap-3">
                     <i class="pi pi-check pt-1" style="font-size: 2.5rem"></i>
                     <div class="flex flex-column gap-3 justify-content-between">

@@ -1,6 +1,7 @@
-import { Component, OnInit  } from '@angular/core';
+import { Component, ElementRef, OnInit  } from '@angular/core';
 import { interval } from 'rxjs';
 import { HostListener } from '@angular/core';
+import { AnimationsService } from 'src/app/services/animations.service';
 
 @Component({
   selector: 'app-section-image-switch',
@@ -18,29 +19,62 @@ export class SectionImageSwitchComponent implements OnInit {
   ];
   currentImageIndex = 0;
   fadeInOut = false;
-  slideActive = false;
-  activatedOnce = false;
+  // slideActive = false;
+  // activatedOnce = false;
+
+  visible1 = false;
+  visible2 = false;
+
+  constructor(
+    private elementRef: ElementRef,
+    private animationService: AnimationsService) { }
 
   ngOnInit() {
-    this.checkScroll(); 
+    this.animationService.observe(
+      this.elementRef.nativeElement.querySelector('.change-images'),
+      () => {
+        this.applyAnimationClass(1);
+      }
+    );
 
-    interval(2000).subscribe(() => {
+    this.animationService.observe(
+      this.elementRef.nativeElement.querySelector('.section-text'),
+      () => {
+        this.applyAnimationClass(2);
+      }
+    );
+    // this.checkScroll(); 
+
+    interval(1500).subscribe(() => {
       this.changeImage();
     });
   }
 
-  @HostListener('window:scroll', ['$event'])
-  checkScroll() {
-    const scrollPosition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    
-    // Ajusta la altura según tu necesidad
-    const scrollTriggerHeight = 2180;
-
-    if (!this.activatedOnce && scrollPosition > scrollTriggerHeight) {
-      this.slideActive = true;
-      this.activatedOnce = true;
+  private applyAnimationClass(elementNumber: number): void {
+    switch (elementNumber) {
+      case 1:
+        this.visible1 = true;
+        break;
+      case 2:
+        this.visible2 = true;
+        break;
+      default:
+        break;
     }
   }
+
+  // @HostListener('window:scroll', ['$event'])
+  // checkScroll() {
+  //   const scrollPosition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    
+  //   // Ajusta la altura según tu necesidad
+  //   const scrollTriggerHeight = 2180;
+
+  //   if (!this.activatedOnce && scrollPosition > scrollTriggerHeight) {
+  //     this.slideActive = true;
+  //     this.activatedOnce = true;
+  //   }
+  // }
 
   changeImage() {
     this.fadeInOut = true;

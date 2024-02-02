@@ -10,6 +10,12 @@
     color: #fff;
 }
 
+.text-header, 
+.middle-text,
+.accordion{
+    opacity: 0;
+}
+
 .accordion-header{
     cursor: pointer;
     // width: 70%;

@@ -51,8 +51,8 @@ export class SectionAboutusComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.textHeaders = this.elementRef.nativeElement.querySelectorAll('.text-header');
-      this.animationService.observeTextHeaders(this.textHeaders);
+    // this.textHeaders = this.elementRef.nativeElement.querySelectorAll('.text-header');
+    //   this.animationService.observeTextHeaders(this.textHeaders);
   }
 
   pauseMarquee() {
