@@ -27,6 +27,14 @@ export class AppComponent implements OnInit {
       this.scrollToTop();
   }
 
+  ngAfterViewInit() {
+    this.renderer.listen(this.window, 'scroll', (event) => {
+      const scrollPosition = this.window.scrollY;
+      this.scrollPosition = scrollPosition
+    });
+
+  }
+
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
